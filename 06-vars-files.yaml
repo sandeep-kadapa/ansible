@@ -1,0 +1,8 @@
+- name: Variables from files
+  hosts: localhost
+  vars_files:
+  - vars.yaml
+  tasks:
+  - name: print information
+    ansibile.builtin.debug:
+      msg: "Hi, We are learning {{course}} from Trainer {{Trainer}} to Learner {{learner}}, Duration is {{Duration}}"
