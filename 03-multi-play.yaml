@@ -2,8 +2,8 @@
   hosts: localhost
   tasks:
   - name: Play-1 and Task-1
-    ansible.builin.debug:
-      msg: "Hello I am play-1 and task-1"
+    ansible.builtin.debug:
+      msg: "Hello I am Play-1 and Task-1"
 
 - name: Play-2
   hosts: localhost
