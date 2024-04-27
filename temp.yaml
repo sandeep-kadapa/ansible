@@ -2,16 +2,7 @@
   hosts: localhost
   vars_files:
     - vars.yaml
-  tasks:
-    - name: Debug loaded variables
-      debug:
-        var: "{{ item }}"
-      loop:
-        - Course
-        - Trainer
-        - Learner
-        - Duration
-
+  tasks: 
     - name: Print override information
       ansible.builtin.debug:
         msg: "Hi, We are learning {{Course}} from Trainer {{Trainer}} to Learner {{Learner}}, Duration is {{Duration}}"
