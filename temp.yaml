@@ -14,4 +14,4 @@
 
     - name: Print override information
       ansible.builtin.debug:
-        msg: "Hi, We are learning {{ Course }} from Trainer {{ Trainer }} to Learner {{ Learner }}, Duration is {{ Duration }}"
+        msg: "Hi, We are learning {{Course}} from Trainer {{Trainer}} to Learner {{Learner}}, Duration is {{Duration}}"
