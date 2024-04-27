@@ -5,7 +5,7 @@
   vars_files:
   - vars.yaml
   vars_prompt:
-  - names: Wishes
+  - name: Wishes
   - prompt: please enter wishes
   - private: false
   tasks:
