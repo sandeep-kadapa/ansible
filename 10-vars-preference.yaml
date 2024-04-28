@@ -10,7 +10,9 @@
     private: false
   tasks:
   - name: check performance
-    vars:
-      Wishes: "Morning from task variables"
     ansible.builtin.debug:
       msg: "Hello, Good {{Wishes}}"
+
+
+# 1. Arguments variable
+# 2. Task variable
