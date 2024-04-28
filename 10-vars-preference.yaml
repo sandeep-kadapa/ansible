@@ -4,6 +4,10 @@
     Wishes: "Morning from play variables"
   vars_files:
   - vars.yaml
+  vars_prompt:
+  - name: Wishes
+    prompt: Enter the Wishes
+    private: false
   tasks:
   - name: check performance
     vars:
