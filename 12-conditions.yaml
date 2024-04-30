@@ -12,8 +12,8 @@
       msg: "User info: {{USER}}"
 
   - name: create user
-    ansible.builtin.debug:
-    when: USER.rc !=0 #condition
+    ansible.builtin.command: useradd expense
+    when: USER.rc != 0 #condition
 
   - name: say hello
     ansible.builtin.debug:
