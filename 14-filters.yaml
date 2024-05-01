@@ -22,3 +22,18 @@
   - name: remove duplicates
     ansible.builtin.debug:
       msg: "{{ numbers | unique }}"
+
+- name: convert dictionary into items/list
+  hosts: localhost
+  vars:
+    we_dict: # this is called as dictionary or map or key/value pairs
+      Course: Ansible
+      Trainer: Sivakumar
+      Duration: 120 hours
+  tasks:
+  - name: before convert
+    ansible.builtin.debug:
+      msg: "Before convert {{we_dict}}"
+  - name: after convert
+    ansible.builtin.debug:
+      msg: "After convert {{we_dict | dict2items}}"
