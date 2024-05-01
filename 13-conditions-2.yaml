@@ -8,9 +8,9 @@
   - name: number is less than 10
     ansible.builtin.debug:
       msg: "Given number {{number}} is less than 10"
-    when: number < 10
+    when: number | int < 10  # | (pipe symbol) is a filter we used to convert number to int
 
   - name: number is greater than or equal to 10
     ansible.builtin.debug:
       msg: "Given number {{number}} is greater than or equal 10"
-    when: number >= 10
+    when: number | int >= 10
