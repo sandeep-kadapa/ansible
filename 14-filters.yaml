@@ -13,3 +13,12 @@
   - name: convert into uppercase
     ansible.builtin.debug:
       msg: "{{ greetings | upper }}"
+
+- name: remove duplicates
+  hosts: localhost
+  vars:
+    numbers:  1, 2, 3, 3, 4, 5, 5
+  tasks:
+  - name: remove duplicates
+    ansible.builtin.debug:
+      msg: "{{ numbers | unique }}"
